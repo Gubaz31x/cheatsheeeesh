@@ -1247,34 +1247,6 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 		end
 	end
 
-	if Settings.Discord then
-		if not isfolder(ArrayFieldFolder.."/Discord Invites") then
-			makefolder(ArrayFieldFolder.."/Discord Invites")
-		end
-		if not isfile(ArrayFieldFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension) then
-			if request then
-				request({
-					Url = 'http://127.0.0.1:6463/rpc?v=1',
-					Method = 'POST',
-					Headers = {
-						['Content-Type'] = 'application/json',
-						Origin = 'https://discord.com'
-					},
-					Body = HttpService:JSONEncode({
-						cmd = 'INVITE_BROWSER',
-						nonce = HttpService:GenerateGUID(false),
-						args = {code = Settings.Discord.Invite}
-					})
-				})
-			end
-
-			if Settings.Discord.RememberJoins then -- We do logic this way so if the developer changes this setting, the user still won't be prompted, only new users
-				writefile(ArrayFieldFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension,"ArrayField RememberJoins is true for this invite, this invite will not ask you to join again")
-			end
-		else
-
-		end
-	end
 
 	if Settings.KeySystem then
 		if not Settings.KeySettings then
