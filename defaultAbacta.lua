@@ -14,7 +14,7 @@ do
 		LoadingSubtitle = "by abacate7 (discord)",
 		ConfigurationSaving = { Enabled = false, FolderName = nil, FileName = "Example Hub" },
 		Discord = { Enabled = true, Invite = "uZgx2YAgN5", RememberJoins = false },
-		KeySystem = true,
+		KeySystem = false,
 		KeySettings = {
 			Title = "Key | Abacate Hub",
 			Subtitle = "Key System",
