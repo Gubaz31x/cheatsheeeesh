@@ -7,7 +7,7 @@ do
 		game:Shutdown()
 	end
 	_G.MenuOpen = true
-	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/ArrayField/main/Source.lua'))()
+	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Gubaz31x/cheatsheeeesh/main/rayfield.lua'))()
 	local Window = Rayfield:CreateWindow({
 		Name = "🔥 War Tycoon Hub | Abacate7 Menu V3",
 		LoadingTitle = "War Tycoon (PVP SCRIPT) by abacate7",
