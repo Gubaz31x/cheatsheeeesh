@@ -8,6 +8,23 @@ do
 	end
 	_G.MenuOpen = true
 	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Gubaz31x/cheatsheeeesh/main/rayfield.lua'))()
+	local Window = Rayfield:CreateWindow({
+		Name = "🔥 War Tycoon Hub | Abacate7 Menu V3",
+		LoadingTitle = "War Tycoon (PVP SCRIPT) by abacate7",
+		LoadingSubtitle = "by abacate7 (discord)",
+		ConfigurationSaving = { Enabled = false, FolderName = nil, FileName = "Example Hub" },
+		Discord = { Enabled = false, Invite = "noinvitelink", RememberJoins = false },
+		KeySystem = false,
+		KeySettings = {
+			Title = "Untitled",
+			Subtitle = "Key System",
+			Note = "No method of obtaining the key is provided",
+			FileName = "Key",
+			SaveKey = true,
+			GrabKeyFromSite = false,
+			Key = { "Hello" },
+		},
+	})
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
 	local gameSystems = workspace:FindFirstChild("Game Systems")
